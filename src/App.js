@@ -23,7 +23,7 @@ function App() {
   let[productList, setProductList] = useState(product)
 
   const incrementQuantity = (index) => {
-    let newProductList = [...product]
+    let newProductList = [...productList];
     newProductList[index].quantity++
     setProductList(newProductList);
   }
@@ -38,7 +38,10 @@ function App() {
     <div>
     <NavBar/> 
     <main className='container mt-5'>
-    <ProductList product ={product} incrementQuantity={incrementQuantity} decrementQuantity ={decrementQuantity}/>
+    <ProductList 
+    productList ={productList} 
+    incrementQuantity={incrementQuantity} 
+    decrementQuantity ={decrementQuantity}/>
     </main>
     
   
