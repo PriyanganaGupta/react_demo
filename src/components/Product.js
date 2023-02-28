@@ -5,7 +5,7 @@ export default function Product(props) {
 
   console.log(props);
   return (
-    <div className="row">
+    <div className="row mt-3">
       <div className="col-5">
         <h2>
           {props.product.name}{" "}
@@ -33,9 +33,12 @@ export default function Product(props) {
           </button>
         </div>
       </div>
-      <div className="col-4">
+      <div className="col-2">
         {props.product.quantity*props.product.price}
       </div>
+
+      <button className="col -2 btn btn-danger" onClick={ () => {
+        props.removeItem(props.index)}}> Remove </button>
 
     </div>
   );
